@@ -5,7 +5,7 @@
         <payment>
             <pagarme_creditcard>
                 <active>1</active>
-                <model>PagarMe\CreditCard\Model\Payment\CreditCard</model>
+                <model>PagarMe\Magneto\Model\Payment\CreditCard</model>
                 <order_status>pending</order_status>
                 <title>Creditcard</title>
                 <allowspecific>0</allowspecific>
