@@ -1,24 +1,19 @@
 version: '3.0'
 services:
-  web:
+  magento:
     image: alexcheng/magento2
     ports:
       - "80:80"
     links:
       - db
     env_file:
-      - env
-    volumes:
-      - ./code/:/var/www/html/eita
-    depends_on:
-      - db
-      - phpmyadmin
+      - .env
   db:
     image: mysql:5.6.23
     volumes:
       - db-data:/var/lib/mysql/data
     env_file:
-      - env
+      - .env
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     ports:
@@ -27,4 +22,3 @@ services:
       - db
 volumes:
   db-data:
-  code:
