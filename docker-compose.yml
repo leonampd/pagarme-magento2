@@ -1,7 +1,7 @@
 version: '3.0'
 services:
   magento:
-    image: alexcheng/magento2
+    image: alexcheng/magento2:2.1
     ports:
       - "80:80"
     links:
@@ -9,7 +9,7 @@ services:
     env_file:
       - .env
     volumes:
-      - .:/var/www/html/app/code/PagarMe/Magneto
+      - .:/var/www/html/app/code/Magento/SamplePaymentGateway
   db:
     image: mysql:5.6.23
     volumes:
